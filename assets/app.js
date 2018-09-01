@@ -8,4 +8,24 @@ let losses = 0;
 let lettersGuessed = [];
 
 //Set up the array of arrays for the words
-const words = [];
+const words = [
+    ["s","p","e","c","i","a","l"]
+];
+
+
+//Let's build some functions for Gameplay
+
+function wordDisplay() {
+    for(let i = 0; i < words[0].length; i++) {
+        $("#array-display").append("<p>");
+        $("<p>").text(word[0][i]);
+    }
+}
+
+
+//Create event
+$("#make-word").on("click", function() {
+    event.preventDefault();
+
+   console.log(word[0][0]);
+})
