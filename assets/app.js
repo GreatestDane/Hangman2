@@ -9,7 +9,8 @@ let lettersGuessed = [];
 
 //Set up the array of arrays for the words
 const words = [
-    ["s","p","e","c","i","a","l"]
+    ["s","p","e","c","i","a","l"],
+    ["p","a","r","t","y"]
 ];
 
 
@@ -17,8 +18,8 @@ const words = [
 
 function wordDisplay() {
     for(let i = 0; i < words[0].length; i++) {
-        $("#array-display").append("<p>");
-        $("<p>").text(word[0][i]);
+        $("#array-display").text(words[0][i]);
+        
     }
 }
 
@@ -26,6 +27,6 @@ function wordDisplay() {
 //Create event
 $("#make-word").on("click", function() {
     event.preventDefault();
-
-   console.log(word[0][0]);
+    
+    wordDisplay();
 })
