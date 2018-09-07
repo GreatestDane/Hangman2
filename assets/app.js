@@ -6,6 +6,7 @@ let losses = 0;
 let secretWord = "";
 let gameOver = false;
 
+
 //Set up the array for the letters that will be guessed
 let lettersGuessed = [];
 
@@ -37,10 +38,24 @@ function wordDisplay() {
     secretWord = "";
 }
 
+//Begin game
+wordDisplay();
 
+document.onkeyup = function (event) {
+    
+    let userGuess = event.key;
+    // if (playOver === true) {
+    //     gameOver = true;
+    // };
+    lettersGuessed.push(userGuess);
+
+    alert(userGuess);
+    $("#guess-display").text(lettersGuessed);
+
+};
 //Create event
-$("#make-word").on("click", function () {
-    event.preventDefault();
+// $("#make-word").on("click", function () {
+//     event.preventDefault();
 
-    wordDisplay();
-})
+
+// })
