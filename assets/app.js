@@ -92,13 +92,7 @@ document.onkeyup = function (event) {
     
 
     //First, check to see if the userGuess is a letter that has already been guessed
-    //Second, check to see if the letter guessed matches the letters in the word. 
-    if (userGuess.toString() !== "a" || "b" || "c" || "d" || "e" || "f" || "g" || "h" || "i" || "j" || "k" || "l" || "m" || "n" || "o" || "p" || "q" || "r" || "s" || "t" || "u" || "v" || "w" || "x" || "y" || "z") {
-        alert("Please pick a letter of the alphabet");
-        console.log(userGuess);
-    }
-    else {
-
+    //Second, check to see if the letter guessed matches the letters in the word.
 
     if (lettersGuessed.indexOf(userGuess.toLowerCase()) === -1) {
         lettersGuessed.push(userGuess.toLowerCase());
@@ -118,8 +112,6 @@ document.onkeyup = function (event) {
             console.log(`Score: ${score}`);
         };
     };
-
-};
 
 
     if (score === randomWord.length) {
